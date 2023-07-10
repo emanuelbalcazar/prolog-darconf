@@ -1,5 +1,5 @@
 humano(emanuel).
-humano(juan).
+humano(sebastian).
 dios(zeus).
 
 mortal(X) :- humano(X).
