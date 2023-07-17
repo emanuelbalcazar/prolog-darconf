@@ -31,6 +31,3 @@ hijo(X, Y) :- madre(Y, X), hombre(X).
 hija(X, Y) :- padre(Y, X), mujer(X).
 hija(X, Y) :- madre(Y, X), mujer(X).
 
-/* relacion abuelo/abuela */
-abuelo(X, Y) :- padre(X, Z), padre(Z, Y).
-abuelo(X, Y) :- padre(X, Z), madre(Z, Y).
