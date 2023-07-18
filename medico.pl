@@ -1,3 +1,4 @@
+% Hechos
 symptom('Flu').
 symptom('Yellowish eyes and skin').
 symptom('Dark color urine').
@@ -20,6 +21,7 @@ treatment('Pain in Joints', 'Apply pain killer and take crocin.').
 treatment('Weakness', 'Drink salt and water, eat fruits.').
 treatment('Stomach Pain', 'Avoid outside food and eat fruits.').
 
+% Regla
 input:- dynamic(patient/2),
     repeat,
     symptom(X),
@@ -31,6 +33,7 @@ input:- dynamic(patient/2),
     \+ not(X='Stomach Pain'),
     not(output).
 
+/* Reglas */
 disease(hemochromatosis) :- 
     patient('Stomach Pain',yes),
     patient('Pain in joints',yes),
@@ -74,6 +77,7 @@ disease(flu) :-
     not(disease(hepatitis_a)),  
     patient('Flu',yes).
 
+/* Reglas */
 output:-
     nl,
     possible_diseases,
